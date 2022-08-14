@@ -1,0 +1,67 @@
+@font-face {
+	font-family: defined;
+	src: url(../font/font.ttf);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: antialiased;
+}
+header {
+	float: center;
+	text-align: center;
+	font-family: defined;
+}
+nav {
+	float: left;
+	text-align: left;
+	border: 5px;
+	border-color: white;
+	border-style: solid;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+body {
+	background-color: black;
+	font-family: defined;
+	color: white;
+	font-size: 20px;
+}
+a {
+	color: yellow;
+	text-decoration:none;
+}
+b {
+	color: red;
+}
+section {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-bottom: 20px;
+}
+q {
+	text-align: right;
+	color: gray;
+}
+div {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+code {
+	border: 5px;
+	border-radius: 5px;
+	border-style: solid;
+	width: 1000px;
+	margin: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.font {       /* 自定义字体*/
+	font-family: defined;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: antialiased;
+	color: white;
+	font-size: 20px;
+}
+.highlight {    /* 标签用高亮*/
+	background-color: darkslategrey;
+	
+}
