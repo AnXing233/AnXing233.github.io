@@ -51,8 +51,11 @@ code {
 	border-radius: 5px;
 	border-style: solid;
 	width: 1000px;
-	margin: 10px;
 	font-family: Arial, Helvetica, sans-serif;
+}
+img {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 .font {       /* 自定义字体*/
 	font-family: defined;
@@ -61,7 +64,4 @@ code {
 	color: white;
 	font-size: 20px;
 }
-.highlight {    /* 标签用高亮*/
-	background-color: darkslategrey;
-	
-}
+

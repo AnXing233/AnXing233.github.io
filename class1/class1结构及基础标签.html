@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>前言</title>
+		<title>第一节：HTML结构及基础标签</title>
 		<link rel="stylesheet" type="text/css" href="../css/text.css" />
 		<!-- 载入语法高亮脚本 -->
 		<link rel="stylesheet" href="../highlight/styles/atom-one-dark.min.css" type="text/css">
@@ -17,8 +17,187 @@
 		<!-- 主体 -->
 		<div>
 		<section>
+			<!-- 大标题 -->
+			<h1>Chapter 1: HTML结构及基础标签</h1>
+			<!-- 主体 -->
+			<h3>编写HTML的编辑器</h3>
+			<p>普通的记事本就可以，但因为它太不方便，因此出现了众多的编辑器，比如<a href="https://code.visualstudio.com/Download#">Visual Studio Code</a>、<a href="http://www.sublimetextcn.com/Sublime%20Text3_86.exe">Sublime Text</a>、<a href="https://download1.dcloud.net.cn/download/HBuilderX.3.5.3.20220729.zip">HbuilderX</a>。<br />
+			专业的比如Adobe公司旗下的<abbr title="Adobe Dreamweaver"><a href="https://baike.baidu.com/item/Adobe%20Dreamweaver/10015800">DW</a></abbr>（用起来挺吃电脑的），不过因为教学关系，这里使用Sublime Text来编辑。<br />
+			
+			<h3>简单编写HTML(必要的代码片段)</h3>
+			<p>首先我们打开Sublime Text，左上角点击“<b>文件(F)</b>”，找到“<b>新建文件(N)</b>”新建空文件；<br />
+			<img src="../img/class1/编辑器编写HTML_1.png"/>
+			<br />
+			随后<b>Ctrl+S</b>(或者“<b>文件(F)→保存(S)</b>”)保存，保存类型为HTML类型文件(写文件名时别忘了加上“.html”扩展名)。<br />
+			<img src="../img/class1/编辑器编写HTML_2.png"/>
+			<img src="../img/class1/编辑器编写HTML_3.png"/>
+			<img src="../img/class1/编辑器编写HTML_4.png"/>
+			<br />
+			在窗口顶部选项栏找到“<b>工具(T)</b>”，找到“<b>命令面板...</b>”，在出现的小框里找到"Snippet: html"，即可调出HTML基础代码。<br />
+			<img src="../img/class1/编辑器编写HTML_5.png" alt=""/>
+			<img src="../img/class1/编辑器编写HTML_6.png"/>
+			<img src="../img/class1/编辑器编写HTML_7.png"/>
+			</p>
+			
+			
+			<h3>HTML网页结构</h3>
+			<p>
+				我们可以看到，HTML主要由这几个部分组成(必须写的)：<br />
+				<img src="../img/class1/HTML代码介绍_1.png"/><br />
+				<q>PS:这里第一个写错了，&lt;!DOCTYPE html&gt;是声明这个网页是用html5制作的</q>
+			</p>
+			
+			<h3>HTML标签</h3>
+			<p>
+				HTML 标记标签通常被称为 HTML 标签 (HTML tag)。<br />
+			<ul>
+				<li>HTML 标签是由<b>尖括号</b>包围的关键词，比如 &lt;html&gt;</li>
+				<li>HTML 标签通常是<b>成对出现</b>的，比如 &lt;b&gt; 和 &lt;/b&gt;</li>
+				<li>标签对中的第一个标签是<b>开始标签</b>，第二个标签是<b>结束标签</b></li>
+				<li>开始和结束标签也被称为<b>开放标签</b>和<b>闭合标签</b></li>
+				</ul>
+				没错，就如&lt;html&gt;、&lt;head&gt;、&lt;body&gt;等等都是标签。<br />
+				开始标签和闭合标签缺一不可（这样就不会出现不必要的麻烦）
+			</p>
+			<h3>HTML的元素</h3>
+			<p>
+				HTML网页是由元素定义的
+				<hr />
+				HTML 元素指的是从开始标签（start tag）到结束标签（end tag）的所有代码。<br /><br />
+				<table border="1" style="border-color: white;">
+					<tr style="background-color: black; ">
+						<th>开始标签</th>
+						<th>元素内容</th>
+						<th>结束标签</th>
+						<th>描述</th>
+					</tr>
+					<tr>
+						<td>&lt;p&gt;</td>
+						<td>这是一处段落</td>
+						<td>&lt;/p&gt;</td>
+						<td>元素显示的是一处段落</td>
+					</tr>
+					<tr>
+						<td>&lt;a href= "index.html"&gt;</td>
+						<td>这里跳转链接</td>
+						<td>&lt;/a&gt;</td>
+						<td>元素显示的是一处可跳转的链接或者其他地方</td>
+					</tr>
+					<tr>
+						<td>&lt;br /&gt;</td>
+						<td></td>
+						<td></td>
+						<td>换行</td>
+					</tr>
+				</table>
+				</p>
+				<br />
+				<h3>HTML 元素语法</h3>
+				<p>
+					<ul>
+				<li>HTML 元素以<strong>开始标签</strong>起始</li>
+				<li>HTML 元素以<strong>结束标签</strong>终止</li>
+				<li><strong>元素的内容</strong>是开始标签与结束标签之间的内容</li>
+				<li>某些 HTML 元素具有<strong>空内容（empty content）</strong></li>
+				<li>空元素<strong>在开始标签中进行关闭</strong>（以开始标签的结束而结束）</li>
+				<li>大多数 HTML 元素可拥有<strong>属性</strong>(下一节再学)</li>
+				</ul>
+			</p>
+			<br />
+			<h3>HTML实例(部分基础标签)</h3>    <!-- 可能会有些乱，不过别担心XD -->
+			<pre>
+				<code>
+&lt;html&gt;
+
+&lt;body&gt;
+	&lt;h1&gt;我的第一个标题。&lt;/h1&gt;
+
+	&lt;p&gt;这是我的第一个段落。&lt;/p&gt;
+
+	&lt;br /&gt;
+
+	&lt;img src="../img/class1/sample.jpg"/&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+				</code>
+			</pre>
+			点击<a href="test.html" target="_blank">这里</a>查看效果
+			
+			<h3>HTML实例解释</h3>
+			<p>
+				<h4>&lt;html&gt; 元素：</h4><br />    <!-- html元素-->
+				<pre>
+				<code>
+&lt;html&gt;
+
+&lt;body&gt;
+&lt;p&gt;这是我的第一段段落。&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+				</code>
+				</pre>
+				&lt;html&gt; 元素定义了整个 HTML 文档。<br />
+				这个元素拥有一个开始标签 &lt;html&gt;，以及一个结束标签 &lt;/html&gt;。<br />
+				元素内容是另一个 HTML 元素（body 元素）。
+				<br />
+				<br />
+
+				
+				<h4>&lt;body&gt; 元素：</h4><br />     <!-- body元素-->
+				<pre>
+					<code>
+&lt;body&gt;
+&lt;p&gt;这是我的第一段段落。&lt;/p&gt;
+&lt;/body&gt;
+					</code>
+				</pre>
+				&lt;body&gt; 元素定义了 HTML 文档的主体。<br />
+				这个元素拥有一个开始标签 &lt;body&gt;，以及一个结束标签 &lt;/body&gt;。<br />
+				元素内容是另一个 HTML 元素（p 元素）。
+				<br />
+				<br />
+				
+				
+				<h4>&lt;p&gt; 元素：</h4><br />    <!-- p元素 -->
+				<pre>
+					<code>
+&lt;p&gt;这是我的第一段段落。&lt;/p&gt;
+					</code>
+				</pre>
+				这个 &lt;p&gt; 元素定义了 HTML 文档中的一个段落。<br />
+				这个元素拥有一个开始标签 &lt;p&gt;，以及一个结束标签 &lt;/p&gt;。<br />
+				元素内容是：这是我的第一段段落。
+				<br />
+				<br />
+
+				<h4>&lt;br /&gt;元素：</h4><br />   <!-- 换行 -->
+				<pre><code>&lt;br /&gt;</code></pre>
+				这个 &lt;br /&gt; 标签定义了 HTML文档文段的换行。<br />
+				这个元素是空元素。没有内容的 HTML 元素被称为空元素。空元素是在开始标签中关闭的。<br />
+				&lt;br&gt; ，&lt;img /&gt;就是没有关闭标签的空元素。<br />
+				在开始标签中添加斜杠，比如 &lt;br /&gt;，是关闭空元素的正确方法。<br />
+				即使 &lt;br&gt; 在所有浏览器中都是有效的，但使用 &lt;br /&gt; 其实是更长远的保障。
+				<br />
+				<br />
+				
+				<h4>&lt;img&gt;元素：</h4><br />   <!-- img元素 -->
+				<pre>
+					<code>
+&lt;img src= "ImginePath" /&gt;
+					</code>
+				</pre>
+				&lt;img /&gt;标签插入图片。<br /><br />
+				其中在里面的“src= "ImaginePath"”是&lt;img /&gt;标签必要的属性(毕竟你不知道图片位置又怎么插入图片呢XDD)
+				<br /><br />
+				"ImginePath"指的是图片存放的位置，比如这里是在“img”文件夹里的“class1”文件夹里的“sample.jpg”文件<br />
+			</p>
+			</p>
 		</section>
 		<nav style="float: left;"><a href="../class0/class0.html">上一节：前言</a></nav>
+		<nav style="float: center;"><a href="../index.html">首页</a></nav>
 		<nav style="float: right;"><a href="../class2/class0.html">下一节：</a></nav>
 		</div>
 		
