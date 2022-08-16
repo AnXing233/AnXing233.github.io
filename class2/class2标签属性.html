@@ -24,6 +24,56 @@
 			当你在完成上次的作业你可能会发现：”这些文段好像都不能改变位置捏！而我想要改变位置，怎么办？“<br />
 			不慌，我们下面学习的”标签属性“会帮到你！
 			</p>
+
+			<h3>HTML属性结构</h3>
+			<p>在上一节我们知道，我们在 &lt;img /&gt; 标签里写入了一个属性：src= "ImginePath" <br />
+			这个就是一种属性。<br />
+			拿回之前在class1插入的图片的位置，我们可以知道，标签属性的形式是这样：<br />
+
+			<img src="../img/class2/属性格式.png" alt="格式是属性=“值”（这里是英文双引号）"/>
+
+			<pre>
+			<code>
+	&lt;img     src= "ImaginePath"/&gt;
+&lt;!--      ↑标签  ↑属性  ↑值   -->
+			</code>
+			</pre>
+
+			这就像给标签附加的信息（可以认为是加buff）<br />
+			它们总是以 “属性 = “值” ”的形式成对出现，如src = "ImaginePath"<br />
+			而且还有个特点是，属性总是在开始标签里定义的
+			</p>
+
+			<h3>使用HTML属性实例</h3>
+			<p>
+				我们来解决上面的问题：改变那些文段的位置。<br />
+				这里我们使用一种属性： align="center" 来把该段文字居中（这里应用于p标签和h1标签）<br />
+				<pre>
+					<code>
+&lt;h1 align= "center"&gt;居中标题&lt;/h1&gt;
+&lt;p align= "center"&gt;把这段文字居中&lt;/p&gt;
+
+					</code>
+				</pre>
+				点击<a target="_blank" href="居中文字.html">此处</a>查看效果！<br />
+				当然，我们可以对这个值进行修改(right、left表示右对齐和左对其) <br />
+				<br />
+				实践：请在那个网页按下F12，打开开发者工具:<br />
+				<img src="../img/class2/实践1.png" alt=""/><br />
+
+				在右边的窗口修改属性: 双击“center”，修改“center”为“right”或者“left”，回车，查看效果<br />
+				<img src="../img/class2/实践2.png" alt=""/>
+				<img src="../img/class2/实践3.png" alt=""/>
+				<br />
+				在<b>body</b>标签添加属性“bgcolor="yellow"”(在此之前请右键body标签，选择“添加属性”（第一个选项）)，可以看到背景变成黄色的了<br />
+				你可以改变属性值来加深理解（PS：用关于颜色的单词，比如red、green等）<br />
+				<img src="../img/class2/实践4.png" alt=""/>
+				<img src="../img/class2/实践5.png" alt=""/>
+				<img src="../img/class2/实践6.png" alt=""/><br />
+				(由于在线编辑不会保存，请自行新建文件多多修改深入理解（怪我不会做在线编辑器qwq）)<br />
+				<q>PS:bgcolor属性是修改背景颜色，bg=BackGround</q>
+
+			</p>
 		</section>
 		</div>
 		<nav style="float: left;"><a href="../class1/class1结构及基础标签.html">上一节：HTML结构及基础标签</a></nav>
