@@ -47,9 +47,7 @@ div {
 	padding-right: 10px;
 }
 code {
-	border: 5px;
-	border-radius: 5px;
-	border-style: solid;
+	background-color: rgb(71, 71, 71);
 	width: 1000px;
 	font-family: Arial, Helvetica, sans-serif;
 }
