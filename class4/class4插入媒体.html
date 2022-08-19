@@ -32,16 +32,55 @@
 				<p>实例：</p>
 				<pre>
 					<code>
-&lt;img src= "" alt= ""	width= "" height= ""/&gt;
+&lt;img src= "https://anxing233.github.io/img/class4/imgine.webp" alt= "文本"	width= "100px" height= "100px"/&gt;
 					</code>
 				</pre>
 				<p>下面具体讲讲这些涉及的属性：</p>
+
 				<h4>src属性（源属性）</h4>
 				<p> "src"是img标签必要的属性，src指”source“，该属性的值是图像的URL地址。</p>
 				<p>URL地址什么意思？ 就是存放图像的位置。<br />
 					如果我把一个图像文件"imgine.webp"放在这个网站根目录的”img“文件夹里的”class4“文件夹的话，那么这个”URL地址“就是： <br />
-				
+					https://anxing233.github.io/img/class4/imgine.webp  （链接可以复制到浏览器查看）
 				</p>
+
+				<h4>alt属性(替换文本属性)</h4>
+				<p>alt 属性用来为图像定义一串预备的可替换的文本。替换文本属性的值是用户定义的。</p>
+				<p>比如：</p>
+				<pre>
+					<code>
+&lt;img src="https://anxing233.github.io/img/class4/imgine.webp" alt= "热词系列_知识增加"/&gt;
+					</code>
+				</pre>
+				<img src="https://anxing233.github.io/img/class4/imgine.webp" width="10%" height="10%" alt= "热词系列_知识增加"/>
+				<p>这个是在你在刷新网页（或者爬梯子）时无法及时显示图片时，这个图片会有一串文字，那就是alt属性里的文字</p>
+				<p>当浏览器无法载入图像时，替换文本属性可告诉读者他们失去的信息。此时，浏览器将显示这个替代性的文本而不是图像。 <br />
+				为页面上的图像都加上替换文本属性是个好习惯，这样有助于更好的显示信息，并且对于那些使用纯文本浏览器的人来说是非常有用的。</p>
+
+				<h4>宽高属性(width,height)</h4>
+				<p>懂得都懂，改它显示的宽高，默认单位是px(像素)，也可以是其他单位(cm什么的) <br />
+					如果你不知道要调多少时，你可以用百分号"%"确定宽高比（如果用%的两个参数要一致）</p>
+
+				<h4>其他属性</h4>
+				<p>
+					<ul>
+						<th>align</th>
+						<li>left(浮动在网页左侧)</li>
+						<li>right(浮动在网页右侧)</li>
+						<li>top(图像顶部在文本对应的行)</li>
+						<li>bottom(默认值，图像底部在文本对应的行)</li>
+						<li>middle(图像的中部在文本对应的行)</li>
+					</ul>
+					<q>(由于说不清楚是什么效果，请点击<a href="imgine.html" target="_blank">此处</a>查看)</q>
+				</p>
+				<p>
+				<h4>title属性</h4>
+				<p>这个属性就是把鼠标悬停在图像那里，显示的文字就是title属性里的属性值（文字）</p>
+				<p>例如：看看这个！把鼠标悬停在下面的图像看看！如果没出错的话，显示的文字是“热词系列_知识增加”</p>
+				<p><img src= "../img/class4/cat.png" alt= "" title= "热词系列_知识增加"/></p>
+				</p>
+
+
 			</div>
 		</section>
 		<nav style="float: left;"><a href="../class3/class3文段标签+a标签.html">上一节：文段标签+超链接标签</a></nav>
