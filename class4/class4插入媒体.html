@@ -63,8 +63,8 @@
 
 				<h4>其他属性</h4>
 				<p>
+					<p>align属性</p>
 					<ul>
-						<th>align</th>
 						<li>left(浮动在网页左侧)</li>
 						<li>right(浮动在网页右侧)</li>
 						<li>top(图像顶部在文本对应的行)</li>
@@ -81,19 +81,124 @@
 				<p><img src= "../img/class4/cat.png" alt= "" title= "热词系列_知识增加"/></p>
 				</p>
 			</div>
+			<hr />
+
 			<div>
 				<h3>插入音频</h3>
 				<p>&lt;audio&gt; 标签可以插入音频</p>
 				<p>实例：</p>
 				<pre>
 					<code>
-&lt;audio src= "URL" controls= "controls" autoplay= "autoplay"&gt;text&lt;/audio&gt;
+&lt;audio src= "URL" controls= "controls" autoplay= "autoplay" loop="loop"&gt;&lt;/audio&gt;
 					</code>
 				</pre>
-				<p>如下所示(没有设置自动播放)：</p>
+				<p>&lt;audio&gt; 标签属性</p>
+				<ul>
+					<li>src: 音频源</li>
+					<li>controls: 显示控件（播放，下载，播放速度什么的）(不开=废了)</li>
+					<li>autoplay: 自动播放（加了的话一打开网页就炸耳(bushi)）</li>
+					<li>loop: 俗称洗脑循环</li>
+					<li>(其实controls,autoplay,loop都可以不用写后面的属性的是，但最好写写)</li>
+				</ul>
+				<br />
+				<p>效果如下所示(没有设置自动播放)(注意音量)：</p>
 				<img src= "../img/class4/imgine.jpg" alt= "" title= "Levels - Avicii" width="10%" height= "10%"/>
-				<audio src="../media/class4/Levels - Avicii.mp3" controls="controls">Levels - Avicii</audio>
+				<audio src="../media/class4/Levels - Avicii.mp3" controls="controls" loop="loop">Levels - Avicii</audio>
 				<p>(是谁应该都知道吧...)</p>
+		</div>
+		<hr />
+
+		<div>
+			<h3>插入视频</h3>
+			<p>&lt;video&gt; 标签可以插入音频</p>
+			<p>实例：</p>
+			<pre>
+				<code>
+&lt;video src= "URL" controls= "controls" autoplay= "autoplay" loop="loop"&gt;&lt;/video&gt;
+				</code>
+			</pre>
+			<p>&lt;video&gt;标签属性同上</p>
+			<p>效果如下所示(一样没设自动播放)(注意音量)：</p>
+			<video src="../media/class4/─━╋.mp4" controls="controls"></video>
+			<br />
+			视频取自：<a href="https://www.bilibili.com/video/BV14x411c7U6" target="_blank">[东方]ナイト—オブ—ナイツ 十六夜咲夜_哔哩哔哩_bilibili</a>
+		</div>
+		<hr />
+		<div>
+			<h3>HTML路径</h3>
+			<p>文件路径描述了网站文件夹结构中某个文件的位置。</p>
+
+			<p>文件路径会在链接外部文件时被用到：</p>
+				<ul>
+				<li>网页</li>
+				<li>图像</li>
+				<li>样式表</li>
+				<li>JavaScript</li>
+			</ul>
+			<p>路径主要分为绝对路径和相对路径：</p>
+			<h4>绝对路径</h4>
+			<p>绝对文件路径是指向一个因特网文件的完整 URL：</p>
+			<strong>实例：</strong>
+			<pre>
+				<code>
+&lt;img src="https://anxing233.github.io/img/class4/example.jpg" alt="picture"/&gt;
+				</code>
+			</pre>
+			<br />
+			<h4>相对路径</h4>
+			<p>相对路径指向了相对于当前页面的文件。</p>
+
+			<p>在本例中，文件路径指向了位于当前网站根目录(index.html所在目录)中 img 文件夹里的一个文件：</p>	
+				<strong>实例</strong>
+				<pre>
+					<code>
+&lt;img src="/img/picture.jpg" alt="flower"/&gt;
+					</code>
+				</pre>
+				<br />
+				<p>在本例中，文件路径指向了位于当前文件夹中 img 文件夹里的一个文件：</p>
+				<strong>实例</strong>
+				<pre>
+					<code>
+&lt;img src="images/picture.jpg" alt="flower"&gt;
+					</code>
+				</pre>
+				<br />
+				<p>在本例中，文件路径指向了位于当前文件夹的上一级文件夹中 img 文件夹里的一个文件：</p>
+				<strong>实例</strong>
+				<pre>
+					<code>
+&lt;img src="../img/picture.jpg" alt="flower"&gt;
+					</code>
+				</pre>
+				<p>PS：写路径时最好使用相对路径</p>
+		</div>
+		<div>
+			<h3>扩展：嵌入bilibili & YouTube视频</h3>
+			<p>在bilibili里视频的播放页里，找到“分享”，点击“嵌入代码”</p>
+			<br />
+			<img src= "../img/class4/扩展1.png" alt= "" title= ""/>
+			<br />
+			<p>吧复制的代码粘贴到你的html文件里就行了</p>
+			<p>但是刚开始那播放窗口很小，所以加入width和height属性设置窗口宽高</p>
+			<br />
+			<p>YouTube视频同上，但无需设置宽高</p>
+			<br />
+			<img src= "../img/class4/扩展2.png" alt= "" title= ""/>
+			<br />
+			<p>所用的视频：</p>
+			<div align="middle">
+				<iframe src="//player.bilibili.com/player.html?aid=499696652&bvid=BV1bK411P767&cid=239571295&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="560" height="390"> </iframe>
+			</div>
+			<br />
+			<div align="middle">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/EmkAREirKb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<br />
+			<div align="middle">
+			<q>YouTube的视频在国内被墙了，所以需要魔法（确信）</q>
+			</div>
+			
 		</div>
 		</section>
 		<nav style="float: left;"><a href="../class3/class3文段标签+a标签.html">上一节：文段标签+超链接标签</a></nav>
