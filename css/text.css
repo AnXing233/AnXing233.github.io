@@ -25,6 +25,10 @@ body {
 	font-family: defined;
 	color: white;
 	font-size: 20px;
+	/*被某人吐槽很丑的阴影*/
+	text-shadow: 0px 1px 0px rgba(163, 163, 163, 0.349),
+	1px 1px 0px rgba(160, 160, 160, 0.349);
+
 }
 a {
 	color: yellow;
@@ -55,7 +59,8 @@ img {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-.font {       /* 自定义字体*/
+.font {
+	/* 自定义字体*/
 	font-family: defined;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: antialiased;
