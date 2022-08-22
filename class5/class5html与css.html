@@ -17,6 +17,187 @@
 		<!-- 主体 -->
 		<div>
 		<section>
+			<!--大标题-->
+			<h1>Chapter5: HTML与css、块、类、id、内联框架</h1>
+			<hr />
+			<!--主体-->
+			<h3>HTML与css</h3>
+			<br />
+			<br />
+			<p>你认为的css:</p>
+			<img src= "../img/class5/css.png" alt= "css图标" title= "css图标"/>
+			<hr />
+			<br />
+			<p>我认为的css:</p>
+			<img src= "../img/class5/蕾姆拉姆.png" alt= "你的最爱.jpg" title= "是蕾姆哒！" width="40%" height="40%"/>
+			<br />
+			<p>[doge]</p>
+			<hr />
+			<h3>什么是css</h3>
+			<p>css，中文名为 层叠样式表(英文全称：<span style="color: red;" title="css全称(bushi)">Cascading Style Sheets</span>)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。</p>
+
+			<p>CSS 能够对网页中元素位置的排版进行像素级精确控制，支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力。 </p>
+			<div style="float: right;">
+			<q>-取自<a target="_blank" href="https://baike.baidu.com/item/CSS/5457?fr=aladdin">百度百科</a>-</q>
+			</div>
+			<hr />
+
+			<h3>怎么加入样式(css)？</h3>
+			<p>当浏览器读到一个样式表，它就会按照这个样式表来对文档进行格式化。有以下三种方式来插入样式表：</p>
+
+			<h4>外部样式表</h4>
+			<p>当样式需要被应用到很多页面的时候，外部样式表将是理想的选择。使用外部样式表，你就可以通过更改一个文件来改变整个站点的外观。</p>
+			<p>(把css文件外挂在网页外部方便修改，要使用时只需链接过来即可)</p>
+			<p>使用 &lt;link&gt; 标签可以链接网页外部的文件(要在 &lt;head&gt; 标签里写)</p>
+			<p>使用：</p>
+			<pre>
+				<code>
+&lt;head&gt;
+&lt;link rel="stylesheet" type="text/css" href="CssPath"&gt;
+&lt;\head&gt;
+				</code>
+			</pre>
+			<p style="color: grey;">PS:其中的“CssPath”是指css文件的位置(文件扩展名是“.css”)。</p>
+			<br />
+			<hr />
+
+			<h4>内部样式表</h4>
+			<p>当单个文件需要特别样式时，就可以使用内部样式表。你可以在 head 部分通过 &lt;style&gt; 标签定义内部样式表。</p>
+			<p>(在 &lt;head&gt; 内部加入 &lt;style&gt; 标签，把css代码写入 &lt;style&gt; 标签内)</p>
+			<p>使用：</p>
+			<pre>
+				<code>
+&lt;head&gt;
+
+	&lt;style type="text/css"&gt;
+	body {
+		background-color: black;
+		color: white;
+	}
+	p {
+		margin-left: 20px;
+	}
+	&lt;/style&gt;
+	&lt;/head&gt;
+				</code>
+			</pre>
+			<p>效果可在<a target="_blank" href="test1.html">此处</a>查看！</p>
+
+			<p>说明：</p>
+			<ul>
+				<li>我们给body标签赋予了些属性：background-color和color</li>
+				<li>background-color是背景颜色</li>
+				<li>color是文本颜色</li>
+				<li>颜色值可填颜色的英文单词，或者使用 rgb(R值,G值,B值) 定义自己喜欢的颜色</li>
+				<br />
+				<li>p标签赋予的“margin-left”是该标签与网页的间距(这里是在左方隔开20像素)</li>
+			</ul>
+			<br />
+
+			<h4>内联样式</h4>
+			<p>当特殊的样式需要应用到个别元素时，就可以使用内联样式。使用内联样式的方法是在相关的标签中使用样式属性。样式属性可以包含任何 CSS 属性。以下实例显示出如何改变段落的颜色和左外边距。</p>
+			<pre>
+				<code>
+&lt;p style="color: red; margin-left: 20px"&gt;
+你是一个一个一个段落啊啊啊啊啊啊啊啊啊
+&lt;/p&gt;
+				</code>
+			</pre>
+			<br />
+			<p>总之：</p>
+			<ul>
+				<li>加入样式表有三种形式：外部样式、内部样式、内联样式</li>
+				<li>如果是要把同一种样式用在许多的网页的话，使用外部样式是最佳选择</li>
+				<li>针对特定网页写入样式的话，使用内部样式</li>
+				<li>针对特定标签写入样式的话，使用内联样式</li>
+				<br />
+				<li>css有特定格式：标签名(不包括方括号“&lt;&gt;”)+花括号“{}”</li>
+				<br />
+				<li>花括号里写入属性，格式是：    属性: 属性值; (均使用英文标点)</li>
+				<li>可以写成一行，但因为看代码方便，请用回车隔开（依自己情况而定）</li>
+				<br />
+				<li>内部样式的属性在头部插入 &lt;style&gt; 标签，内部写入css代码(外部样式的css文件不需要 style 标签，直接写即可)</li>
+				<li>内联样式在特定标签的开标签后面加空格，再加入 “ style="" ” 属性，写法跟css代码一样</li>
+			</ul>
+			<br />
+			<hr />
+			<h3>HTML 块</h3>
+			<h4>HTML块元素</h4>
+			<p>大多数 HTML 元素被定义为块级元素或内联元素。</p>
+			<p>编者注：“块级元素”译为 block level element，“内联元素”译为 inline element。</p>
+			<p>块级元素在浏览器显示时，通常会以新行来开始（和结束）。</p>
+			<P>例子：&lt;h1&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;table&gt;</p>
+
+			<hr />
+
+			<h4>HTML内联元素</h4>
+			<p>内联元素在显示时通常不会以新行开始。</p>
+			<p>例子：&lt;b&gt;, &lt;td&gt;, &lt;a&gt;, &lt;img&gt;</p>
+
+			<br />
+
+			<p style="color: grey;">PS: &lt;ul&gt; 标签定义无序列表， &lt;table&gt; 定义表格，&lt;b&gt; 标签定义粗体，&lt;td&gt; 定义表格里的一个格子(之后会学到)</p>
+
+			<br />
+			<p>关于块级元素和内联元素的理解：</p>
+			<img src= "../img/class5/块级内联元素.png" alt= "" title= "" border="1"/>
+			<hr />
+			<h3>&lt;div&gt; 元素</h3>
+			<p>HTML &lt;div&gt; 元素是块级元素，它是可用于组合其他 HTML 元素的容器。</p>
+			<P>&lt;div&gt; 元素没有特定的含义。除此之外，由于它属于块级元素，浏览器会在其前后显示折行。</P>		
+			<p>如果与 CSS 一同使用，&lt;div&gt; 元素可用于对大的内容块设置样式属性。</p>		
+			<P>&lt;div&gt; 元素的另一个常见的用途是文档布局。它取代了使用表格定义布局的老式方法。使用 &lt;table&gt; 元素进行文档布局不是表格的正确用法。&lt;table&gt; 元素的作用是显示表格化的数据。</p>
+			<p style="color: grey;">(说白了就是个大容器，可以在里面的所有东西作为一个整体)</p>
+			<p>实例：</p>
+			<pre>
+				<code>
+&lt;div style="float:left;"&gt;
+	&lt;h1&gt;标题&lt;/h1&gt;
+	&lt;p&gt;段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落&lt;br /&gt;
+	段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段&lt;br /&gt;
+	落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落&lt;br /&gt;
+	段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段&lt;br /&gt;
+	落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落&lt;br /&gt;
+	段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落&lt;/p&gt;
+&lt;/div&gt;
+&lt;div style="float:left;"&gt;
+	&lt;h1&gt;标题&lt;/h1&gt;
+	&lt;p&gt;段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落&lt;br /&gt;
+	段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段&lt;br /&gt;
+	落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落&lt;br /&gt;
+	段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段&lt;br /&gt;
+	落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落&lt;br /&gt;
+	段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落段落&lt;/p&gt;
+&lt;/div&gt;
+				</code>
+			</pre>
+			点击<a target="_blank" href="test2.html">此处</a>查看效果(放大网页会发现用div套住的元素会跟着一起往下)
+			<br />
+			<hr />
+			<h3>&lt;span&gt; 元素</h3>
+			<p>HTML &lt;span&gt; 元素是内联元素，可用作文本的容器。</P>
+			<p>&lt;span&gt; 元素也没有特定的含义。</p>
+			<P>当与 CSS 一同使用时，&lt;span&gt; 元素可用于为部分文本设置样式属性。</p>
+				<p>比如：</p>
+				<pre>
+					<code>
+&lt;p&gt;今天是多美好的一天啊。&lt;br /&gt;
+	小鸟在歌唱，鲜花在绽放。&lt;br /&gt;
+	在这样的一天里，像你这样的孩子...&lt;br /&gt;
+	&lt;span style="color: red;"&gt;应 当 在 地 狱 里 焚 烧 。&lt;/span&gt;
+&lt;/p&gt;
+					</code>
+				</pre>
+				<p>效果如下：</p>
+
+				<div border="1" style="border: 2px; border-style: solid; float: left;" >
+				<p>今天是多美好的一天啊。<br />
+					小鸟在歌唱，鲜花在绽放。<br />
+					在这样的一天里，像你这样的孩子...<br />
+					<span style="color: red;">应 当 在 地 狱 里 焚 烧 。</span>
+				</p>
+			</div>
+			
 		</section>
 		</div>
 		
