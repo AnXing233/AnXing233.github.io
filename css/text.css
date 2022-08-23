@@ -67,4 +67,10 @@ img {
 	color: white;
 	font-size: 20px;
 }
+.jsshow {
+	padding: 20px;
+	margin: 10px;
+	float: center;
+	background-color: rgba(0, 255, 255, 0.295);
+}
 

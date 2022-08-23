@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>第六节：HTML与JavaScript</title>
+		<link rel="stylesheet" type="text/css" href="../css/text.css" />
+		<!-- 载入语法高亮脚本 -->
+		<link rel="stylesheet" href="../highlight/styles/atom-one-dark.min.css" type="text/css">
+		<script src="../highlight/languages/haml.min.js"></script>
+		<script src="../highlight/highlight.min.js"></script>
+	</head>
+	<body>
+		<script>hljs.initHighlightingOnLoad();</script>  <!-- 载入语法高亮脚本 -->
+		<!--导航栏-->
+		<nav><a href="../index.html">返回首页</a></nav>
+		<br />
+		<!-- 主体 -->
+		<div>
+		<section>
+			<!--大标题-->
+			<h1>Chapter 6: HTML与JavaScript</h1>
+			<hr />
+			<!--主体-->
+			<q>本文仅仅初步理解，因为这个废物还不会这个编程语言X(</q>
+
+			<br />
+			<br />
+			<div>
+			<h3>JavaScript 使 HTML 页面更具动态性和交互性</h3>
+			<p>实例：</p>
+			<pre>
+				<code>
+&lt;p&gt;我的第一段JavaScript&lt;/p&gt;
+&lt;button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()"&gt;
+点击我来显示日期和时间
+&lt;/button&gt;
+&lt;p id="demo"&gt;&lt;/p&gt;
+				</code>
+			</pre>
+			<p>效果：</p>
+
+			<div>
+				<p>我的第一段JavaScript</p>
+			<button type="button"
+			onclick="document.getElementById('demo').innerHTML = Date()" >
+			点击我来显示日期和时间
+			</button>
+			<p id="demo"></p>
+		</div>
+		<hr />
+		<p>说明：</p>
+		<p>这里引入一个 &lt;button&gt; 标签，这个是用来定义一个可点击的按钮。</p>
+		<p>&lt;button&gt; 中的"onclick"属性，是指点击后的事件(俗称点击后会干说什么)</p>
+		<p>这里 onclick 属性里是属性值，就是一段JavaScript代码</p>
+		<hr />
+		<p>我们分开来看：</p>
+		<p class="jsshow">document.getElementById('demo').innerHTML = Date()</p>
+
+		<pre class="font">
+		<p>
+在此文档(该网页)                                <span style="color: red;">(document)</span><br /><br />
+寻找一个名为“demo”的元素                        <span style="color: red;">(getElementById('demo'))</span><br /><br />
+在这个元素所在的标签更改HTML元素                  <span style="color: red;">(innerHTML)</span><br /><br />
+把显示日期的函数      (指<span style="color: red;">Date()</span>)      的这个值赋予给了这个id
+		
+		</p>
+		</pre>
+		<q>管你看没看懂，NB就完事了！[doge]</q>
+		<hr />
+		
+		<h3>&lt;script&gt; 标签</h3>
+		<p>HTML <span style="color: red;">&lt;script&gt;</span> 标签用于定义客户端脚本（JavaScript）。</p>
+		<p><span style="color: red;">&lt;script&gt;</span> 元素即可包含脚本语句，也可通过 <span style="color: red;">src</span> 属性指向外部脚本文件。</p>	
+		<p>JavaScript 的常见用途是图像处理、表单验证和内容的动态更改。</p>
+		<p>如需选取 HTML 元素，JavaScript 最常用 <span style="color: red;">document.getElementById()</span> 方法。</p>
+		<br />
+		<p>这里的例子是在有“idname”的这个id的标签更改里面的内容</p>
+		<p>实例：</p>
+		<pre>
+			<code>
+&lt;script&gt;
+	document.getElementById('idname').innerHTML = "你好JavaScript";
+&lt;/script&gt;
+			</code>
+		</pre>
+
+		<p>效果：</p>
+		<button type="button" onclick="document.getElementById('idname').innerHTML = '你好JavaScript';">快点点我！别让它就这么嚣张下去！</button>
+		<p id="idname">想修改我？没门！除非你会JavaScript！</p>
+		</div>
+		</section>
+		</div>
+		
+	</body>
+</html>
