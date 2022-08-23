@@ -31,7 +31,7 @@
 			<p>我认为的css:</p>
 			<img src= "../img/class5/蕾姆拉姆.png" alt= "你的最爱.jpg" title= "是蕾姆哒！" width="40%" height="40%"/>
 			<br />
-			<p>[doge]</p>
+			<q>(以上内容纯属扯淡，切勿当真)</q>
 			<hr />
 			<h3>什么是css</h3>
 			<p>css，中文名为 层叠样式表(英文全称：<span style="color: red;" title="css全称(bushi)">Cascading Style Sheets</span>)是一种用来表现HTML（标准通用标记语言的一个应用）或XML（标准通用标记语言的一个子集）等文件样式的计算机语言。CSS不仅可以静态地修饰网页，还可以配合各种脚本语言动态地对网页各元素进行格式化。</p>
@@ -258,8 +258,102 @@
 					<p>效果可在<a target="_blank" href="test3.html">此处</a>查看！</p>
 					<p>这里说明下padding和margin属性：</p>
 					<img src= "../img/class5/padding与margin.png" alt= "" title= "" width="100%" height="100%"/>
+
+					<p>总结：</p>
+					<ul>
+						<li>创建一个类的方式：英文句号(.)+类名，后面加上花括号({})加入css样式</li>
+						<li>调用(使用)类的方式：在开标签后面加空格，加入“class="类名"”，即可使用类</li>
+						<li>一个类可用于多个元素</li>
+					</ul>
+					</div>
+					<hr />
+					<div>
+					<h3>HTML id</h3>
+					<p>id 属性指定 HTML 元素的唯一 ID。 id 属性的值在 HTML 文档中必须是<span style="color: red;">唯一的</span>。</p>
+					<p>id 属性用于指向样式表中的特定样式声明。JavaScript 也可使用它来访问和操作拥有特定 ID 的元素。</p>				
+					<p>id 的语法是：写一个井号 (#)，后跟一个 id 名称。然后，在花括号 {} 中定义 CSS 属性。</p>
+					<P>下面的例子中我们有一个 &lt;h1&gt; 元素，它指向 id 名称 "myid"。这个 &lt;h1&gt; 元素将根据 head 部分中的 #myid 样式定义进行样式设置：</p>
+						<pre>
+							<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+	&lt;meta charset="UTF-8"&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+	&lt;style&gt;
+	/*用 井号 “#” + id名 创建一个id*/
+		#myid {
+			background-color: lightblue;
+			color: black;
+			padding: 20px;
+			text-align: center;
+		}
+	&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1 id="myid"&gt;芜~标题111111&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+							</code>
+						</pre>
+						<p>效果可在<a target="_blank" href="test4.html">此处</a>查看！</p>
+						<hr />
+						<h4 style="color: red;">Class 与 ID 的差异</h4>
+						<p>同一个类名可以由多个 HTML 元素使用，而一个 id 名称只能由页面中的一个 HTML 元素使用
+							<br />
+							(讲人话就是类(class)可以用无数次，id只能用在这个网页里的一个标签一次)
+						</p>
+						<p style="color: red;">易混淆点注意！</p>
+						<hr />
+						<p>id还可用于“书签”作用(具体方法见第三节的<a href="../class3/class3文段标签+a标签.html#name属性">这里</a>)</p>
+						<p>使用方法与name属性类似，但是name属性不可用于定义样式，但是id属性可以</p>
+						<p>实例：</p>
+						<p>首先我在一个大标题处标记一个id:</p>
+						<pre>
+							<code>
+&lt;h1 id="heading"&gt;我是大标题呀！wua~~&lt;/h1&gt;
+							</code>
+						</pre>
+						<p>如果我在这网页的底部，想要回到此处时，我们只需要 &lt;a&gt; 标签跳转到此处</p>
+						<pre>
+							<code>
+&lt;a href="#heading"&gt;跳转链接&lt;/a&gt;
+&lt;!--可以加入target属性--&gt;
+							</code>
+						</pre>
+						<q>这个id也可用于Javascript改变文本，讲到Javascript时再解释</q>
 				</div>
+				<hr />
+			<div>
+				<h3>HTML内联框架</h3>
+				<p>iframe 用于在网页内显示网页。</p>
+				<hr />
+				<iframe src="https://bilibili.com" frameborder="0" width="1200px" height="700px"></iframe>
+				<hr />
+				<p>食用方法：</p>
+				<pre>
+					<code>
+&lt;iframe src="URL" frameborder="0" width="" height="" &gt;&lt;/iframe&gt;
+					</code>
+				</pre>
+				<p>其中的 “frameborder="0"” 是内联框架边框的开关，属性值是0就是关，1就是开</p>
+				<p>很巧的是，我们也可以在 iframe 标签里设置name属性，然后用 a 标签把 a 标签里的链接 跳转到这个内联框架</p>
+				<p>实例：</p>
+				<pre>
+					<code>
+&lt;iframe src="https://www.baidu.com" frameborder="0" name="框架A"&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href="https://www.bing.com" target="框架A"&gt;跳转链接&lt;/a&gt;&lt;/p&gt;
+					</code>
+				</pre>
+			<p>点击<a target="_blank" href="test5.html">此处</a>查看效果！</p>
+			<p>PS:href属性跳转到一个id是需要在id名前面加“#”的，而target属性不用</p>
+			</div>
+			<!--
+			<h2></h2>-->
 		</section>
+		<nav style="float: left;"><a href="../class5/class5html与css.html">上一节：插入媒体</a></nav>
+		<nav style="float: center;"><a href="../index.html">首页</a></nav>
+		<nav style="float: right;"><a href="../class6/class0.html">下一节：</a></nav>
 		</div>
 		
 	</body>
