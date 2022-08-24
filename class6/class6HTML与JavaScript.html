@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>第六节：HTML与JavaScript</title>
+		<title>第六节：HTML与JavaScript、框架</title>
 		<link rel="stylesheet" type="text/css" href="../css/text.css" />
 		<!-- 载入语法高亮脚本 -->
 		<link rel="stylesheet" href="../highlight/styles/atom-one-dark.min.css" type="text/css">
@@ -25,6 +25,7 @@
 
 			<br />
 			<br />
+
 			<div>
 			<h3>JavaScript 使 HTML 页面更具动态性和交互性</h3>
 			<p>实例：</p>
@@ -52,7 +53,7 @@ onclick="document.getElementById('demo').innerHTML = Date()"&gt;
 		<p>说明：</p>
 		<p>这里引入一个 &lt;button&gt; 标签，这个是用来定义一个可点击的按钮。</p>
 		<p>&lt;button&gt; 中的"onclick"属性，是指点击后的事件(俗称点击后会干说什么)</p>
-		<p>这里 onclick 属性里是属性值，就是一段JavaScript代码</p>
+		<p>这里 onclick 属性里的属性值，就是一段JavaScript代码</p>
 		<hr />
 		<p>我们分开来看：</p>
 		<p class="jsshow">document.getElementById('demo').innerHTML = Date()</p>
@@ -60,7 +61,7 @@ onclick="document.getElementById('demo').innerHTML = Date()"&gt;
 		<pre class="font">
 		<p>
 在此文档(该网页)                                <span style="color: red;">(document)</span><br /><br />
-寻找一个名为“demo”的元素                        <span style="color: red;">(getElementById('demo'))</span><br /><br />
+寻找一个名为“demo”的id元素                      <span style="color: red;">(getElementById('demo'))</span><br /><br />
 在这个元素所在的标签更改HTML元素                  <span style="color: red;">(innerHTML)</span><br /><br />
 把显示日期的函数      (指<span style="color: red;">Date()</span>)      的这个值赋予给了这个id
 		
@@ -79,15 +80,105 @@ onclick="document.getElementById('demo').innerHTML = Date()"&gt;
 		<p>实例：</p>
 		<pre>
 			<code>
+&lt;p id="idname"&gt;发 生 啥 事 ！ 我 练 功 发 自 真 心 ！&lt;/p&gt;
 &lt;script&gt;
 	document.getElementById('idname').innerHTML = "你好JavaScript";
 &lt;/script&gt;
 			</code>
 		</pre>
+		<p>PS:这个ID要写在script标签前才能检测到，而且无论这个标签写了什么内容，它都会被替换</p>
 
-		<p>效果：</p>
-		<button type="button" onclick="document.getElementById('idname').innerHTML = '你好JavaScript';">快点点我！别让它就这么嚣张下去！</button>
-		<p id="idname">想修改我？没门！除非你会JavaScript！</p>
+		<p>效果(这里写入了“啊啊啊啊”)：</p>
+		<p id="idname">啊啊啊啊</p>
+		<script>
+		document.getElementById("idname").innerHTML = "你好JavaScript";
+		</script>
+		<hr />
+
+		<h3>这寄吧JavaScript还能干嘛</h3>
+		<p>它能更改HTML样式：</p>
+		<pre>
+			<code>
+document.getElementById("demotext").style.fontSize = "25px";
+document.getElementById("demotext").style.color = "black";
+document.getElementById("demotext").style.backgroundColor = "grey";
+document.getElementById("demotext").style.textAlign = "center";
+			</code>
+		</pre>
+		<p>试试看！</p>
+		<p id="demotext">有节操！有节操！有节操，噢噢噢噢~~~</p>
+		<button type="button" onclick="document.getElementById('demotext').style.fontSize = '25px';
+		document.getElementById('demotext').style.color = 'black';
+		document.getElementById('demotext').style.backgroundColor = 'grey';
+		document.getElementById('demotext').style.textAlign = 'center';">点击我改变样式！</button>
+		<hr />
+		<h3>&lt;noscript&gt; 标签</h3>
+		<p>HTML &lt;noscript&gt; 标签定义了替代内容，这些内容将显示给在浏览器中禁用了脚本或浏览器不支持脚本的用户：</p>
+		<p>(讲白了就是当浏览器不能用 script 标签时 ，这个标签作为替代内容告诉读者用不了脚本)</p>
+		<pre>
+			<code>
+&lt;script&gt;
+document.getElementById("demo").innerHTML = "Hello JavaScript!";
+&lt;/script&gt;
+&lt;noscript&gt;抱歉，您的浏览器不支持 JavaScript！&lt;/noscript&gt;
+			</code>
+		</pre>
+		<p>如果你想学习更多的JavaScript的知识的话，请点击<a target="_blank" href="https://www.w3school.com.cn/js/index.asp">此处</a>学习(什)</p>
+		</div>
+		<hr />
+		<div>
+			<h3>HTML框架</h3>
+			<p>通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。每份HTML文档称为一个框架，并且每个框架都独立于其他的框架。</p>
+			<p>直观的讲就像手机程序双/多开模式</p>
+			<p>使用框架的坏处：</p>
+			<ul>
+				<li>开发人员必须同时跟踪更多的HTML文档</li>
+				<li>很难打印整张页面(估计是加载慢)</li>
+			</ul>
+			<br />
+			<h4>框架结构标签</h4>
+			<p>框架结构标签（&lt;frameset&gt;）定义如何将窗口分割为框架</p>
+			<p>每个 frameset 定义了一系列行或列</p>
+			<p>rows/columns 的值规定了每行或每列占据屏幕的面积</p>
+			<br />
+			<h4>框架标签</h4>
+			<p>Frame 标签定义了放置在每个框架中的 HTML 文档。</p>
+			<p>在下面的这个例子中，我们设置了一个<span style="color:red;">两列</span>的框架集。第一列被设置为占据浏览器窗口的 25%。第二列被设置为占据浏览器窗口的 75%。<br />
+				HTML 文档 "frame_a.html" 被置于第一个列中，而 HTML 文档 "frame_b.html" 被置于第二个列中：</p>
+				<pre>
+					<code>
+&lt;frameset cols="25%,75%"&gt;
+	&lt;frame src="frame_a.html"&gt;
+	&lt;frame src="frame_b.html"&gt;
+ &lt;/frameset&gt;
+					</code>
+				</pre>
+				<p>可以点击<a target="_blank" href="frame_1.html">此处</a>查看!(可以随意拖动之间的分割线)</p>
+				<br />
+				<p>这里是<span style="color:red;">两行(第二行两列)</span>的框架集：</p>
+				<pre>
+					<code>
+&lt;frameset rows="50%, 50%"&gt;
+
+&lt;frame src="frame_c.html"&gt;
+
+&lt;frameset cols="25%,75%"&gt;
+	&lt;frame src="frame_a.html"&gt;
+	&lt;frame src="frame_b.html"&gt;
+ &lt;/frameset&gt;
+
+&lt;/frameset&gt;
+					</code>
+				</pre>
+				<p>可点击<a target="_blank" href="frame_2.html">此处</a>查看！</p>
+				<p>PS: cols是设置列的属性，rows是设置行的属性</p>
+				<hr />
+				<h3 style="color: red;">使用该标签的注意事项:</h3>
+				<p>假如一个框架有可见边框，用户可以拖动边框来改变它的大小。为了避免这种情况发生，可以在 &lt;frame&gt; 标签中加入：noresize="noresize"。</p>
+				<p>为不支持框架的浏览器添加 &lt;noframes&gt; 标签。</p>
+				<p style="color: red;">不能将 &lt;body&gt;&lt;/body&gt; 标签与 &lt;frameset&gt;&lt;/frameset&gt; 标签同时使用！不过，假如你添加包含一段文本的 &lt;noframes&gt; 标签，就必须将这段文字嵌套于 &lt;body&gt;&lt;/body&gt; 标签内。</p>
+
+
 		</div>
 		</section>
 		</div>
