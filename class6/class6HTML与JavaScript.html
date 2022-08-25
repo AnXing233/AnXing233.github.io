@@ -209,18 +209,36 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";
 				</pre>
 				<p>点击<a target="_blank" href="example1.html">此处</a>查看！</p>
 				<hr />
-				<p>导航框架</p>
+				<p>导航框架(以及跳转到指定的部分)</p>
 				<pre>
 					<code>
-<frameset cols="120, *">
-	<frame src="">
-</frameset>
+&lt;frameset cols="120, *"&gt;
+	&lt;frame src="导航链接.html"&gt;
+	&lt;frame src="frame_a.html" name= "showframe"&gt;
+&lt;/frameset&gt;
+&lt;!--这里看不出来如何跳转到指定的部分--&gt;
 					</code>
 				</pre>
-
+				<p>其中“导航链接.html”的body部分是这么写的：</p>
+				<pre>
+					<code>
+&lt;a target="showframe" href="../class0/class0.html"&gt;章节0&lt;/a&gt; &lt;br /&gt;
+&lt;a target="showframe" href="../class1/class1结构及基础标签.html"&gt;章节1&lt;/a&gt; &lt;br /&gt;
+&lt;a target="showframe" href="../class2/class2标签属性.html"&gt;章节2&lt;/a&gt; &lt;br /&gt;
+&lt;a target="showframe" href="../class3/class3文段标签+a标签.html#name属性"&gt;章节3的name属性&lt;/a&gt;
+					</code>
+				</pre>
+				<p>其中导航链接的超链接需要使用target属性指向到showframe这个name(name的属性值)</p>
+				<p>点击<a target="_blank" href="example2.html">此处</a>查看！</p>
+				<hr />
+				<p>相信各位都挺难受的，这节没有图片。 <br />
+					所以在<a target="_blank" href="../img/class6/picture.jpg">这里</a>留张图吧(卧槽我什么德行)</p>
 
 		</div>
 		</section>
+		<nav style="float: left;"><a href="../class5/class5html与css.html">上一节：HTML与css</a></nav>
+		<nav style="float: center;"><a href="../index.html">首页</a></nav>
+		<nav style="float: right;"><a href="../class7/class0.html">下一节：</a></nav>
 		</div>
 		
 	</body>
