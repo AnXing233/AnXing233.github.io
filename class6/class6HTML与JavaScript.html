@@ -177,6 +177,46 @@ document.getElementById("demo").innerHTML = "Hello JavaScript!";
 				<p>假如一个框架有可见边框，用户可以拖动边框来改变它的大小。为了避免这种情况发生，可以在 &lt;frame&gt; 标签中加入：noresize="noresize"。</p>
 				<p>为不支持框架的浏览器添加 &lt;noframes&gt; 标签。</p>
 				<p style="color: red;">不能将 &lt;body&gt;&lt;/body&gt; 标签与 &lt;frameset&gt;&lt;/frameset&gt; 标签同时使用！不过，假如你添加包含一段文本的 &lt;noframes&gt; 标签，就必须将这段文字嵌套于 &lt;body&gt;&lt;/body&gt; 标签内。</p>
+				<hr />
+				<h4>各种实例：</h4>
+				<hr />
+				<p>&lt;noframes&gt; :浏览器不支持框架时提示的替代信息：</p>
+				<pre>
+					<code>
+&lt;noframes&gt;
+	&lt;body&gt;
+		哦豁:( &lt;br /&gt;
+		看来你所使用的服务器不支持框架呢！ &lt;br /&gt;
+		请换个浏览器试试吧！
+	&lt;/body&gt;
+&lt;/noframes&gt;
+					</code>
+				</pre>
+				<hr />
+				<p>含有 noresize="noresize" 属性的框架结构(使用此属性你不能拖动分割线来改变网页结构)</p>
+				<pre>
+					<code>
+&lt;html&gt;
+
+&lt;frameset cols="30%,*,25%"&gt;
+  &lt;frame src="frame_a.html" noresize="noresize" /&gt;
+  &lt;frame src="frame_b.html" /&gt;
+  &lt;frame src="frame_c.html" /&gt;
+&lt;/frameset&gt;
+
+&lt;/html&gt;
+					</code>
+				</pre>
+				<p>点击<a target="_blank" href="example1.html">此处</a>查看！</p>
+				<hr />
+				<p>导航框架</p>
+				<pre>
+					<code>
+<frameset cols="120, *">
+	<frame src="">
+</frameset>
+					</code>
+				</pre>
 
 
 		</div>
